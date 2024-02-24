@@ -58,7 +58,7 @@ if (x !== 0) {
     console.log(false)
 }
 
-let a = (1);
+let a = 1;
 switch (a){
     case 1:
         console.log(true);
