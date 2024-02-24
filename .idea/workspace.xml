@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47964920-4673-4704-a27b-c73296689c33" name="Changes" comment="js" />
+    <list default="true" id="47964920-4673-4704-a27b-c73296689c33" name="Changes" comment="jscamera">
+      <change afterPath="$PROJECT_DIR$/lesson2/lesson2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson2/lesson2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -74,6 +78,15 @@
       <workItem from="1708457489597" duration="24000" />
       <workItem from="1708542625029" duration="1084000" />
       <workItem from="1708594989876" duration="2063000" />
+      <workItem from="1708597101047" duration="426000" />
+      <workItem from="1708613317694" duration="207000" />
+      <workItem from="1708687474783" duration="34000" />
+      <workItem from="1708689466005" duration="7000" />
+      <workItem from="1708690818187" duration="36000" />
+      <workItem from="1708691254992" duration="3854000" />
+      <workItem from="1708708384551" duration="811000" />
+      <workItem from="1708715559293" duration="9284000" />
+      <workItem from="1708764264093" duration="18377000" />
     </task>
     <task id="LOCAL-00001" summary="js">
       <option name="closed" value="true" />
@@ -91,7 +104,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708597035952</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="js">
+      <option name="closed" value="true" />
+      <created>1708597159097</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708597159097</updated>
+    </task>
+    <task id="LOCAL-00004" summary="jscamera">
+      <option name="closed" value="true" />
+      <created>1708613491585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708613491585</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +128,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="js" />
-    <option name="LAST_COMMIT_MESSAGE" value="js" />
+    <MESSAGE value="jscamera" />
+    <option name="LAST_COMMIT_MESSAGE" value="jscamera" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
