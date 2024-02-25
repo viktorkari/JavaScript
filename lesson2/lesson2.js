@@ -144,9 +144,12 @@ let userNumber= {
     num1:2,
     num2:4
 }
-    if (userNumber.num1 <= userNumber.num2){
-    console.log(userNumber.num2);
-}else {
+    if (userNumber.num1 >= userNumber.num2){
+    console.log(userNumber.num1);
+}else if (userNumber.num2 >= userNumber.num1){
+        console.log(userNumber.num2);
+}
+    else {
     console.log(NaN);
 }
 
