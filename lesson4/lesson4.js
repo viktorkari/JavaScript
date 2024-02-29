@@ -101,4 +101,16 @@ minNumber(numbers);
 let minimum= minNumber(numbers);
 console.log(minimum);
 
+//створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+
+let allNum = [2, 4, 6, 8, 10];
+function suma(allNum){
+    let res = 0;
+    for (let i = 0; i < allNum.length; i++) {
+          res += allNum[i];
+    }
+    return res;
+}
+let res = suma(allNum);
+console.log(res);
 
