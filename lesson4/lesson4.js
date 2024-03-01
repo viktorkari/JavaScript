@@ -27,12 +27,12 @@ console.log(cylinderArea);
 // - створити функцію яка приймає масив та виводить кожен його елемент
 
 let users=["js","html","react","ts"]
-function array() {
+function array(users) {
     for (const elements of users) {
         console.log(elements)
     }
 }
-array()
+array(users)
 
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 
@@ -114,3 +114,33 @@ function suma(allNum){
 let res = suma(allNum);
 console.log(res);
 
+// - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
+// Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+
+let index =[11, 22, 33, 44];
+function swap(index) {
+    let index1=index[0];
+    index[0]=index[1];
+    index[1]=index1;
+
+}
+swap(index);
+console.log(index);
+
+// - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
+// Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
+
+let currencyValues =[
+    {currency:"USD",value:38},
+    {currency:"UAH",value:1},
+    {currency:"EUR",value:41}
+];
+let sumUAH = 250;
+function exchange(sumUAN,currencyValues ) {
+    for (const currency of currencyValues) {
+        let exchangeRate = currency.value
+        let result = sumUAH / exchangeRate;
+        console.log(result);
+    }
+}
+exchange(sumUAH, currencyValues);
