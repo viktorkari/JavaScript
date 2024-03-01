@@ -132,15 +132,16 @@ console.log(index);
 
 let currencyValues =[
     {currency:"USD",value:38},
-    {currency:"UAH",value:1},
-    {currency:"EUR",value:41}
+    {currency:"EUR",value:42}
 ];
 let sumUAH = 250;
 function exchange(sumUAN,currencyValues ) {
     for (const currency of currencyValues) {
         let exchangeRate = currency.value
         let result = sumUAH / exchangeRate;
-        console.log(result);
+        let currencyName = currency.currency;
+        console.log(result,currencyName);
     }
 }
 exchange(sumUAH, currencyValues);
+
