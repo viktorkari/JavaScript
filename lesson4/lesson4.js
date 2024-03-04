@@ -107,7 +107,7 @@ let allNum = [2, 4, 6, 8, 10];
 function suma(allNum){
     let res = 0;
     for (let i = 0; i < allNum.length; i++) {
-          res += allNum[i];
+        res += allNum[i];
     }
     return res;
 }
@@ -134,14 +134,21 @@ let currencyValues =[
     {currency:"USD",value:38},
     {currency:"EUR",value:42}
 ];
-let sumUAH = 250;
+let sumUAH = 300;
 function exchange(sumUAN,currencyValues ) {
     for (const currency of currencyValues) {
         let exchangeRate = currency.value
-        let result = sumUAH / exchangeRate;
+        let result = sumUAH / exchangeRate|0;
         let currencyName = currency.currency;
-        console.log(result,currencyName);
+        document.write(`<h3 class="c">300 UAH = ${result} ${currencyName}</h3>`)
     }
 }
 exchange(sumUAH, currencyValues);
 
+//
+// let schedule = prompt("exchange")
+// switch (schedule) {
+//     case "sumUAH":
+//         console.log(result);
+//         break
+// }
