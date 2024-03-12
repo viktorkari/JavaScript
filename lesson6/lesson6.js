@@ -110,7 +110,7 @@ let redCards = deck.filter(card =>card.suit === "heart" || card.suit === "diamon
 console.log( redCards);
 let diamonds = deck.filter(card =>card.suit === "diamond");
 console.log( diamonds);
-let spades = deck.filter(card =>card.rank>"9" && card.suit === "spade");
+let spades = deck.filter(card => card.suit === "spade" && (card.rank >="9" && card.rank <="queen"));
 console.log( spades);
 
 //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
