@@ -89,89 +89,82 @@ else{
 }
 // – Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
 // (в першу, другу, третю або четверту частину години).
-let time =
+let time = +(prompt('time'));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if (time >= 0 && time < 15) {
+    console.log('first')
+}
+else if (time >= 15 && time < 30) {
+    console.log('second')
+}
+else if (time >= 30 && time < 45) {
+    console.log('third')
+}
+else if (time >= 45 && time < 60) {
+    console.log('fourth')
+}
+else {
+    console.log('error')
+}
 // – У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину (декаду) місяця потрапляє це число (у першу, другу чи третю).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let day = +(prompt('day'));
+if (day >= 1 && day <= 15) {
+    console.log('first')
+}
+else if (day >= 16 && day <= 30) {
+    console.log('second')
+}
+else if (day >= 31 && day <= 31) {
+    console.log('third')
+}
 // – Скласти розклад на тиждень за домопогою switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа, що заплановано на цей день (можна замість плану на день, назву дня англійською).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    let user = +(prompt('день  недели (1-7)'));
+    switch (user) {
+        case 1:
+            console.log('monday');
+            break;
+        case 2:
+            console.log('tuesday');
+            break;
+        case 3:
+            console.log('wednesday');
+            break;
+        case 4:
+            console.log('thursday');
+            break;
+        case 5:
+            console.log('friday');
+            break;
+        case 6:
+            console.log('saturday');
+            break;
+        case 7:
+            console.log('sunday');
+            break;
+        default:
+            console.log('error');
+    }
 // – Користувач вводить або має два числа.
 //     Потрібно знайти та вивести максимальне число з тих двох .
 //     Також потрібно врахувати, коли введені рівні числа.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let num1 = +(prompt('Введите первое число'));
+let num2 = +(prompt('Введите второе число'));
+if (num1 === num2) {
+    console.log('Числа равны:', num1);
+} else if (num1 > num2) {
+    console.log('Максимальное число:', num1);
+} else {
+    console.log('Максимальное число:', num2);
+}
 // – є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код, який
 // буде присвоювати змінній х значення “default”,  якщо ви намагаєтесь присвоїти в неї falsy-значення (хибноподібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).
-
+let y = (prompt(''));
+if (y === 0 || x === null || x === undefined || x === false) {
+    console.log('default')
+}
+else {
+    console.log(x)
+}
 
 
 
