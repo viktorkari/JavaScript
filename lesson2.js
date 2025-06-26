@@ -147,8 +147,8 @@ else if (day >= 31 && day <= 31) {
 // – Користувач вводить або має два числа.
 //     Потрібно знайти та вивести максимальне число з тих двох .
 //     Також потрібно врахувати, коли введені рівні числа.
-let num1 = +(prompt('Введите первое число'));
-let num2 = +(prompt('Введите второе число'));
+let num1 = +(prompt('1 число'));
+let num2 = +(prompt('2 число'));
 if (num1 === num2) {
     console.log('Числа равны:', num1);
 } else if (num1 > num2) {
@@ -158,11 +158,51 @@ if (num1 === num2) {
 }
 // – є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код, який
 // буде присвоювати змінній х значення “default”,  якщо ви намагаєтесь присвоїти в неї falsy-значення (хибноподібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).
-let y = (prompt(''));
-if (y === 0 || x === null || x === undefined || x === false) {
-    console.log('default')
+let y = prompt('Введіть значення');
+if (!y || y === "0") {
+    y = "default";
 }
 else {
-    console.log(x)
-}
+console.log(y);}
 // з файлу arrays.js ( лежить у вкладеннях)  взяти масив coursesAndDurationArray. За допомогою іф перевірити кожен його елемент на тривалість навчання. У випадку, якщо тривалість довша за 5 місяців, вивести в консоль “Супер”.
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+if (coursesAndDurationArray[0].monthDuration > 5) {
+    console.log('Super')
+}
+else {
+    console.log('Not Super')
+}if (coursesAndDurationArray[1].monthDuration > 5) {
+    console.log('Super')
+}
+else {
+    console.log('Not Super')
+}if (coursesAndDurationArray[2].monthDuration > 5) {
+    console.log('Super')
+}
+else {
+    console.log('Not Super')
+}if (coursesAndDurationArray[3].monthDuration > 5) {
+    console.log('Super')
+}
+else {
+    console.log('Not Super')
+}if (coursesAndDurationArray[4].monthDuration > 5) {
+    console.log('Super')
+}
+else {
+    console.log('Not Super')
+}if (coursesAndDurationArray[5].monthDuration > 5) {
+    console.log('Super')
+}
+else {
+    console.log('Not Super')
+}
+
+
