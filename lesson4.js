@@ -78,35 +78,96 @@ function createListli(text, count) {
 }
 createListli('jessi', 5);
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та виводить його через document.write
+function createliUl(number, string, boolean) {
+    let listHTML = '<ul>';
+
+    // Добавляем каждый параметр как отдельный li элемент
+    listHTML += `<li>${number}</li>`;
+    listHTML += `<li>${string}</li>`;
+    listHTML += `<li>${boolean}</li>`;
+
+    listHTML += '</ul>';
+    document.write(listHTML);
+}
+
+createliUl(5, 'jessi', true);
+// - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок
+function displayObjects(arrayOfObjects) {
+    const container = document.createElement('div');
+    container.className = 'objects-container';
+
+    arrayOfObjects.forEach(obj => {
+        const block = document.createElement('div');
+        block.className = 'object-block';
+
+        block.innerHTML = `
+            <p><strong>ID:</strong> ${obj.id}</p>
+            <p><strong>Name:</strong> ${obj.name}</p>
+            <p><strong>Age:</strong> ${obj.age}</p>
+            <hr>
+        `;
+
+        container.appendChild(block);
+    });
+
+    document.body.appendChild(container);
+}
 
 
+const people = [
+    { id: 1, name: 'jess', age: 25 },
+    { id: 2, name: 'ivi', age: 30 },
+    { id: 3, name: 'Masha', age: 28 }
+];
 
-
-
-
-
-
-
-
-// - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
-
-
-
-
+displayObjects(people);
 // - створити функцію яка повертає найменьше число з масиву
-
-
-
+function findMinNumber(array) {
+    if (!array || array.length === 0) {
+        return null;
+    }
+    return Math.min(...array);
+}
+const numbers = [5, 2, 9,  7, 6, 3];
+console.log(findMinNumber(numbers));
 // - створити функцію sum(arr) яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
-
-
-
+function sumFor(arr) {
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return 0;
+    }
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total;
+}
+console.log(sumFor([1, 2, 10]));
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відповідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
-
-
-
-
-
+function swap(arr, index1, index2) {
+    if (index1 < 0 || index2 < 0 || index1 >= arr.length || index2 >= arr.length) {
+        throw new Error('Индексы выходят за пределы массива');
+    }
+    // Создаём копию массива, чтобы не изменять оригинальный
+    const result = [...arr];
+    // Обмен значениями с использованием деструктуризации
+    [result[index1], result[index2]] = [result[index2], result[index1]];
+    return result;
+}
+console.log(swap([11, 22, 33, 44], 0, 1));
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD') // => 400
+function exchange(sumUAH, currencyValues, exchangeCurrency) {
+    // Поиск нужной валюты
+    const currency = currencyValues.find(curr => curr.currency === exchangeCurrency);
+    // Расчет обмена
+    const result = sumUAH / currency.value;
+    // Округляем до 2 знаков после запятой
+    return Number(result.toFixed(2));
+}
+const currencies = [
+    {currency: 'USD', value: 25},
+    {currency: 'EUR', value: 42},
+];
+console.log(exchange(10000, currencies, 'USD'));
+console.log(exchange(10000, currencies, 'EUR'));
