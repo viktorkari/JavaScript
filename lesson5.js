@@ -1,45 +1,102 @@
 // Тут ті самі завдання, що і в занятті про базові функції, але зробити їх потрібно за допомоги стрілочних функцій
 //--------------------------------------------------------------------------------------------------------//
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-
-
-
-
-
-
-
-
-
+let arean = (a, b) => a * b;
+console.log(arean(10,20));
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
-
-
-
-
-
-
-
-
-
+let are = (a, b, c) => a * b * c;
+console.log(are(5,5,5));
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
-// #SIdMd0hQ
+let area = (a, b, c) => a * b * c * Math.PI;
+console.log(area(2,10,20));
 // - створити функцію яка приймає масив та виводить кожен його елемент
-// #59g0IsA
+let courses = [
+    {title: 'JavaScript', monthDuration: 5},
+    {title: 'Python', monthDuration: 4},
+    {title: 'Java', monthDuration: 6},
+];
+let coursesAndDurationArray = (arr) => {
+    arr.forEach(course => {
+        console.log(`${course.title} - ${course.monthDuration} month`);
+    });
+};
+coursesAndDurationArray(courses);
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
-// #hOL6126
+let createList = (text) => {
+    const list = `
+         <p>${text}</p>
+    `;
+    document.write(list);
+}
+createList('jessica')
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
-// #0Kxco1edSN
+let createListli = (text) => {
+    const list = `
+         <ul>
+            <li>${text}</li>
+            <li>${text}</li>
+            <li>${text}</li>
+         </ul>
+    `;
+    document.write(list);
+}
+createListli('jessi');
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
-// #gEFoxMMO
+let createListlist = (text, count) => {
+    let list = '<ul>';
+    for (let i = 0; i < count; i++) {
+        list += `<li>${text}</li>`;
+    }
+    list += '</ul>';
+    document.write(list);
+};
+createListlist('jessi', 3);
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-// #bovDJDTIjt
+let createArr = (number, string, boolean) => {
+    let list = '<ul>';
+    list += `<li>${number}</li>`;
+    list += `<li>${string}</li>`;
+    list += `<li>${boolean}</li>`;
+    list += '</ul>';
+    document.write(list);
+}
+createArr(5, 'jessi', true);
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
-//     #pghbnSB
+let people = [
+    {id: 1, name: 'jessi', age: 26},
+    {id: 2, name: 'ivi', age: 25},
+    {id: 3, name: 'Masha', age: 30}
+];
+let displayObjects = (arrayOfObjects) => {
+    const container = document.createElement('div');
+    container.className = 'objects-container';
+
+    arrayOfObjects.forEach(obj => {
+        const block = document.createElement('div');
+        block.id = 'obj';
+        block.innerHTML = `
+            <p><strong>ID:</strong> ${obj.id}</p>
+            <p><strong>Name:</strong> ${obj.name}</p>
+            <p><strong>Age:</strong> ${obj.age}</p>
+        `;
+        container.appendChild(block); // добавляем блок в контейнер
+    });
+    document.body.appendChild(container); // добавляем контейнер на страницу
+};
+displayObjects(people);
+
 // - створити функцію яка повертає найменьше число з масиву
-// #EKRNVPM
+
+
+
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
-// #kpsbSQCt2Lf
+
+
+
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
-// #mkGDenYnNjn
+
+
+
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
