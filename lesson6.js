@@ -147,22 +147,35 @@ console.log(spade);
 //     hearts:[],
 //     clubs:[]
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// =========================
-// #4LJn7zBx
+let cards = createDeck().reduce((acc, card) => {
+    // Если массив для масти ещё не создан — создаём его
+    if (!acc[card.suit]) {
+        acc[card.suit] = [];
+    }
+    // Добавляем карту в соответствующий массив
+    acc[card.suit].push(card);
+    return acc;
+}, {}); // Начальное значение — пустой объект
+console.log(cards);
 // взяти з arrays.js масив coursesArray
 // --написати пошук всіх об'єктів, в яких в modules є sass
+let coursesArray = [
+    {
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+        title: 'QA Complex',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },]
+//+++++++++++++++++++++++++++++++++++++++++++//
+
+const sass = coursesArray.filter(modul => modul.modules.includes('css'));
+console.log(sass);
 // --написати пошук всіх об'єктів, в яких в modules є docker
+const js = coursesArray.filter(modul => modul.modules.includes('js'));
+console.log(js);
